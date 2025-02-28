@@ -11,6 +11,7 @@
   - [Coverage](#coverage)
   - [Immune Cell Estimation from ESTIMATE Algorithm](#immune-cell-estimation-from-estimate-algorithm)
 - [Neoantigens from pVACseq](#neoantigens-from-pvacseq)
+- [Mucin Gene Expression](#mucin-gene-expression)
 
 # Clinical data
 
@@ -90,4 +91,7 @@ This dataset was generated using pVACseq, a tool that predicts neoantigens based
 - **neoantigens**: The number of neoantigens detected for each variant type in the sample.
 
 
+# Mucin Gene Expression
+
+We have included a new dataset, `muc_tpm.csv`, which contains **TPM-normalized gene expression values** for mucin-related genes. This allows comparison of mucin expression levels across samples.
 
