@@ -1,15 +1,17 @@
 # Table of contents
 
-- [Clinical Data](#clinical-data)
+- [Clinical data](#clinical-data)
   - [Sample ID](#sample-id)
-  - [Patient Characteristics](#patient-characteristics)
+  - [Patient characteristics](#patient-characteristics)
   - [MSI and TMB](#msi-and-tmb)
-  - [Tumor Stage](#tumor-stage)
-  - [Survival Data](#survival-data)
-  - [Immune Cell Estimation from Blood](#immune-cell-estimation-from-blood)
-  - [Tumor-Infiltrating Lymphocytes (TIL) Estimation from Images](#tumor-infiltrating-lymphocytes-til-estimation-from-images)
+  - [Tumor stage](#tumor-stage)
+  - [Survival data](#survival-data)
+  - [Immune cell estimation from blood](#immune-cell-estimation-from-blood)
+  - [Tumor-Infiltrating Lymphocytes (TIL) estimation from images](#tumor-infiltrating-lymphocytes-til-estimation-from-images)
   - [Coverage](#coverage)
-  - [Immune Cell Estimation from ESTIMATE Algorithm](#immune-cell-estimation-from-estimate-algorithm)
+  - [Immune cell estimation from ESTIMATE algorithm](#immune-cell-estimation-from-estimate-algorithm)
+- [STAD clinical data](#stad-clinical-data)
+- [UCEC clinical data](#ucec-clinical-data)
 - [Neoantigens from pVACseq](#neoantigens-from-pvacseq)
 - [Mucin Gene Expression](#mucin-gene-expression)
 
@@ -80,6 +82,21 @@ The ESTIMATE algorithm uses gene expression data to infer different tumor proper
 ESTIMATE algorithm paper:
 
 Yoshihara, K., et al.: Inferring tumour purity and stromal and immune cell admix-ture from expression data. Nat Commun 4, 2612 (2013) https://doi.org/10.1038/ncomms3612
+
+# STAD clinical data
+
+`stad_clinical.csv` file contains clinical annotations for samples from the TCGA-STAD (Stomach Adenocarcinoma) dataset.
+
+The dataset includes information such as sample and case identifiers, sample type, age, gender, tumor stage, MSI status, tumor mutational burden (TMB), overall survival, and vital status. It follows the same column structure as the COAD and READ clinical datasets (see the [clinical data](#clinical-data) section for reference).
+
+If certain columns are missing, it is because the information was not available in the original STAD clinical data source.
+
+
+# UCEC clinical data
+
+`ucec_clinical.csv` file contains clinical annotations for samples from the TCGA-UCEC (Uterine Corpus Endometrial Carcinoma) dataset. It follows the same column structure as the COAD and READ clinical datasets (see the [clinical data](#clinical-data) section for reference).
+
+If certain columns are missing, it is because the information was not available in the original UCEC clinical data source.
 
 
 # Neoantigens from pVACseq
