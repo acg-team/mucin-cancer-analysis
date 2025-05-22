@@ -14,6 +14,8 @@
 - [UCEC clinical data](#ucec-clinical-data)
 - [Neoantigens from pVACseq](#neoantigens-from-pvacseq)
 - [Mucin Gene Expression](#mucin-gene-expression)
+- [Mucin data](#mucin-data)
+  - [Mucin data columns](#mucin-data-columns)
 
 # Clinical data
 
@@ -111,4 +113,25 @@ This dataset was generated using pVACseq, a tool that predicts neoantigens based
 # Mucin Gene Expression
 
 We have included a new dataset, `muc_tpm.csv`, which contains **TPM-normalized gene expression values** for mucin-related genes. This allows comparison of mucin expression levels across samples.
+
+# Mucin data
+
+Mucin data is taken from the study: 
+
+Nguyen, Huu-Giao, et al. *"Image-based assessment of extracellular mucin-to-tumor area predicts consensus molecular subtypes (CMS) in colorectal cancer."* Modern Pathology 35.2 (2022): 240-248.
+
+## Sample id
+- **case_submitter_id**: A unique patient identifier that submitted the sample. It does not correspond to **Tumor_Sample_Barcode** used in other TCGA files. To understand more, refer to [GDC](https://docs.gdc.cancer.gov/Encyclopedia/pages/TCGA_Barcode/).
+- **Transformation**: To convert **Tumor_Sample_Barcode** to **case_submitter_id**, remove the suffix from the barcode.
+  - Example:
+    - **Tumor Sample Barcode**: `TCGA-A6-2671-01A-11D-A36X-10`
+    - **Corresponding Case Submitter ID**: `TCGA-A6-2671`
+
+## Mucin data columns
+- **MSI**: Microsatellite Instability (MSI) status of the sample. Possible values: `MSS` (Microsatellite Stable) or `MSI` (Microsatellite Instable).
+- **average_mucin**: The average level of mucin detected in the sample.
+- **max_mucin**: The maximum mucin level detected in the sample.
+- **mucin**: A binary indicator (`0` or `1`), where `1` denotes the presence of mucin in the sample and `0` indicates its absence.
+- **CMS**: Consensus Molecular Subtype (CMS) classification of colorectal cancer, with possible values: `CMS1`, `CMS2`, `CMS3`, or `CMS4`. 
+
 
